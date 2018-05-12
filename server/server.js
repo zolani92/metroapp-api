@@ -9,6 +9,8 @@ const app = express();
 app.use(bodyParser.json());
 app.use(cors());
 
+const port = process.env.PORT || 5000
+
 const getLongStationName = (stationName, line) => {
   return stationName + " [" + line + "]";
 }
@@ -113,6 +115,6 @@ app.post('/metro/shortestpath', (req, res) => {
   }).catch((e) => { res.status(400).send(e) });
 });
 
-app.listen(2998, () => {
-  console.log('App started on port 2998');
+app.listen(port, () => {
+  console.log('App started on port ', port);
 });
