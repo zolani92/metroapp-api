@@ -1,1 +1,1 @@
-web: npm run stationsPopulate && npm run start
+web: npm run start
