@@ -107,7 +107,7 @@ app.post('/metro/shortestpath', (req, res) => {
           departureStationName: req.body.departureStationName,
           arrivalStationName: req.body.arrivalStationName,
           itinerary: itinerary, 
-          stationsCount: shortestPath.length-1,
+          stationsCount: shortestPath.length-1-transfersCount,
           transfersCount: transfersCount
         });
       });
